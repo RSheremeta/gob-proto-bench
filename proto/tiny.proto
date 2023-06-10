@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package pb.gen;
+
+option go_package = "github.com/RSheremeta/gob_proto_bench/proto_gen";
+
+message Tiny {
+  int64 tiny_id = 1;
+  string some_str = 2;
+}
+
+message TinyArray {
+  repeated Tiny tiny_arr = 1;
+}

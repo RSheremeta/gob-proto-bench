@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package pb.gen;
+
+option go_package = "github.com/RSheremeta/gob_proto_bench/proto_gen";
+
+import "huge.proto";
+
+message ComplexAndHuge {
+    map<string, Huge> complex_map = 1;
+}
+
+message ComplexAndHugeArray {
+    repeated ComplexAndHuge complex_arr = 1;
+}

@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package pb.gen;
+
+option go_package = "github.com/RSheremeta/gob_proto_bench/proto_gen";
+
+import "big.proto";
+
+message Huge {
+    BigArray big_slice = 1;
+    BigArray bigger_slice = 2;
+    BigArray the_biggest_slice = 3;
+}
+
+message HugeArray {
+    repeated Huge huge_arr = 1;
+}

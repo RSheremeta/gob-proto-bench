@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package pb.gen;
+
+option go_package = "github.com/RSheremeta/gob_proto_bench/proto_gen";
+
+import "tiny.proto";
+import "google/protobuf/timestamp.proto";
+
+message Medium {
+  int64 medium_id = 1;
+  string first_name = 2;
+  string last_name = 3;
+  double medium_money_balance = 4;
+  google.protobuf.Timestamp created_at = 5;
+  Tiny tiny_field = 6;
+}
+
+message MediumArray {
+  repeated Medium medium_arr = 1;
+}
