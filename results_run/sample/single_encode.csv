@@ -1,0 +1,15 @@
+goos: darwin
+goarch: arm64
+pkg: github.com/RSheremeta/gob-proto-bench/test
+BenchmarkEncodeSingleComplexMap/type=GOB_struct_size=huge_complex_map-10         	      10	  51716921 ns/op	84000585 B/op	  731909 allocs/op
+BenchmarkEncodeSingleComplexMap/type=Proto_struct_size=huge_complex_map-10       	      10	  40617621 ns/op	43575244 B/op	  466002 allocs/op
+BenchmarkEncodeSingle/type=GOB_struct_size=tiny-10                               	      10	      2762 ns/op	    1137 B/op	      20 allocs/op
+BenchmarkEncodeSingle/type=GOB_struct_size=medium-10                             	      10	      4925 ns/op	    1720 B/op	      38 allocs/op
+BenchmarkEncodeSingle/type=GOB_struct_size=big-10                                	      10	      7025 ns/op	    2792 B/op	      61 allocs/op
+BenchmarkEncodeSingle/type=GOB_struct_size=huge-10                               	      10	    687012 ns/op	 1184441 B/op	    5407 allocs/op
+BenchmarkEncodeSingle/type=Proto_struct_size=tiny-10                             	      10	       587.5 ns/op	      16 B/op	       1 allocs/op
+BenchmarkEncodeSingle/type=Proto_struct_size=medium-10                           	      10	       904.2 ns/op	      48 B/op	       1 allocs/op
+BenchmarkEncodeSingle/type=Proto_struct_size=big-10                              	      10	       875.0 ns/op	     128 B/op	       1 allocs/op
+BenchmarkEncodeSingle/type=Proto_struct_size=huge-10                             	      10	    456542 ns/op	  172032 B/op	       1 allocs/op
+PASS
+ok  	github.com/RSheremeta/gob-proto-bench/test	1.224s
