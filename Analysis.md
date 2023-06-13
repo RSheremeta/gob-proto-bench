@@ -52,3 +52,30 @@ I've omitted highlighting ``Medium`` and ``Big`` structs' results, as the most i
         - Protobuf also leads a decoding of huge struct with nice results:
             - 42068254 ns/op, 46749560 B/op, 932608 allocs/op
             - Gob wins in memory only - 36011551 B/op which is ~1.3x faster than Proto
+
+
+### Single complex map type
+
+- **Encoding**:
+    Protobuf is better than Gob in terms of everything:
+    - ~1.3x faster (39798617 ns/op vs Gob's 50383350 ns/op)
+    - 2x less memory (43716723 B/op vs Gob's 84001060 B/op)
+    - 1.5x less memory allocations per operation (466002 allocs/op vs Gob's 731911 allocs/op)
+
+- **Decoding**:
+    Gob requires 25% more time, ~1.3x more memory usage, 10% more allocations to decode a complex map rather than Protobuf.
+
+
+### Slice of a complex map type
+
+- **Encoding**:
+    Gob is *way better* than Protobuf in terms of everything here:
+    - ~4x faster (479433658 ns/op vs Proto's 2061921788 ns/op),
+    - ~2.5x less memory needed (809329121 B/op vs 2181560966 B/op for Proto),
+    - ~3x less memory allocations per operation needed (7318099 allocs/op vs Protobuf's 23299824 allocs/op)
+
+- **Decoding**:
+    Protobuf also shows *way worse* results here: ~4x slower, needs ~3.5x more bytes and ~4.5x more allocations per operation rather than Gob
+    - Gob's results: 573950896 ns/op, 633277254 B/op, 10645891 allocs/op
+    - Proto's results: 2153558850 ns/op, 2337695762 B/op, 46637425 allocs/op
+
