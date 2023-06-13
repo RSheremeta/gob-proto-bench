@@ -1,7 +1,8 @@
 # gob-proto-bench
 
 #### Benchmarking Gob vs Protobuf.
-This is Part 2 of the experiment of measuring Gob's (de)serialization performance. See Part 1 [here](https://github.com/RSheremeta/gob-serialization)
+This is Part 2 of the experiment of measuring Gob's (de)serialization performance. See Part 1 [here](https://github.com/RSheremeta/gob-serialization).
+
 This repo is made just out of curiosity and has an experimental reasoning.
 
 ### Description
@@ -30,7 +31,7 @@ The experiment is run on:
 
 Here is the full analysis of mine about all the results run: [Analysis.md](https://github.com/RSheremeta/gob-proto-bench/blob/master/Analysis.md)
 
-[**map_ptr_slice_decode.csv:**](https://github.com/RSheremeta/gob-proto-bench/blob/master/results_run/sample/map_slice_decode.csv)
+[**map_slice_decode.csv:**](https://github.com/RSheremeta/gob-proto-bench/blob/master/results_run/sample/map_slice_decode.csv)
 
 ```bash
 goos: darwin
